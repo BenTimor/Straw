@@ -24,4 +24,4 @@ Next, if you want to compile some file/s, just run this code:
     python [Clone Directory]/Straw/straw.py [File], [File2]...
 
 ## Tutorial
-You can read the tutorial in TUTORIAL.md
+You can read the tutorial in the [tutorial](https://github.com/DrBenana/Straw/tree/master/tutorial) folder.

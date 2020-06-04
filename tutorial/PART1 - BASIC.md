@@ -1,6 +1,5 @@
-
 ## Basic Tutorial
-The tutorial is WIP.
+In this tutorial we're going to learn about the basics of Straw.
 
 ### Tutorial Rquired Knowladge
 1. HTML basics
