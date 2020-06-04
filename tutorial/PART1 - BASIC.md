@@ -1,7 +1,7 @@
 ## Basic Tutorial
 In this tutorial we're going to learn about the basics of Straw.
 
-### Tutorial Rquired Knowladge
+### Tutorial Rquires Knowladge
 1. HTML basics
 2. Some programming background. **Recommended** - Python basics
 3. A brain can help sometimes.
