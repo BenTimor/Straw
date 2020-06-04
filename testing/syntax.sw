@@ -7,10 +7,23 @@ head
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
-    title Straw - A new CLIENT-SIDE programming language
+    title
+        @eval
+            return input("What title do you want to use? > ")
 
 body
+    @eval
+        return "IDKK"
     center
+        
+        @eval(naming, 1)
+            inp = input("Enter your name -> ") if not command.parms else command.parms[0]
+            if inp:
+                return inp
+            else:
+                return "Ben"
+        span
+            @naming
         br
         h1(style="color: orange")
             strong Straw - A new CLIENT-SIDE programming language
@@ -18,10 +31,10 @@ body
         p You're welcome. 
             @safe
                 <b> Have a nice day </b>
+                        
+        @import(anothersyntax.sw)
+        @modules(coolfunction)
         
-        @compile(python)
-            I'm just messing with you. I didn't develop it yet.
-            
         ^note
             TODO:
             - Develop compile

@@ -19,8 +19,9 @@ class Block:
         Block Object 2
         Block Object 3
     """
-    def __init__(self, text):
+    def __init__(self, text, spaces):
         self.text = text
+        self.spaces = spaces
 
 def count_spaces(line):
     """
@@ -69,14 +70,14 @@ def find_text(line):
     else:
         return ""
 
-def preprocess(content):
+def preprocess(content, addhtml=True):
     """
     This function is preprocessing the content of a file.
     It takes everyline and converts it into a Command object / Block object.
     """
     # Just replacing the tabs with spaces and splitting the lines.
     lines = [" " + line for line in content.replace("\t", " ").split("\n")]
-    lines.insert(0, "html")
+    if addhtml: lines.insert(0, "html")
     commands = []
     block = 0
     
@@ -91,7 +92,7 @@ def preprocess(content):
         # If the last command were a command which requires a block, it finds its block.
         if block:
             if spaces > block:
-                commands.append(Block(line))
+                commands.append(Block(line, spaces))
                 continue
             else:
                 # Resets the block

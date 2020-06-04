@@ -64,17 +64,18 @@ def process(preprocessed):
                 del lastcommands[-1]
                 lastblocks = []
                 
-            if lastcommands[-1].command.startswith("^"):
+            if lastcommands and lastcommands[-1].command.startswith("^"):
                 del lastcommands[-1]
                 lastblocks = []
         
         lastcommands = close_tags(processed, command, lastcommands)
         lastcommands.append(command)
         
+        # Run it for any html tag
         if not (command.command.startswith("@") or command.command.startswith("^")):
             parms = " ".join(command.parms)
             parms = " " + parms if parms else ""
             processed.append(f"<{command.command}{parms}> {command.text}")
     
     # Returns the full html file without Nones
-    return "\n".join([x for x in processed if x != None])
+    return "\n".join([x for x in processed if x])

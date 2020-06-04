@@ -1,2 +1,3 @@
 SYSTEM_COMMANDS = {}
 NOT_CLOSING_TAGS = ["br"]
+MODULES = {}

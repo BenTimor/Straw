@@ -25,6 +25,10 @@ def main():
                 
         except FileNotFoundError as e:
             print(f"Hey! One of the files ({arg}) doesn't exist. Continuing with all of the other files...")
+        
+#         except ModuleNotFoundError as e:
+#             print("Hey! One of the modules in this file is not found. Sometimes it's happing due to an error and running again will solve the problem.")
+#             print("If running the compiling again didn't solve it, You may have missing files in your folder.")
             
 if __name__ == "__main__":
     main()
