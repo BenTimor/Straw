@@ -25,3 +25,42 @@ Next, if you want to compile some file/s, just run this code:
 
 ## Tutorial
 You can read the tutorial in the [tutorial](https://github.com/DrBenana/Straw/tree/master/tutorial) folder.
+
+## Code Example
+Straw code:
+
+    head
+      title This is my website!
+    
+    body
+      center
+        h1 Hello! :)
+        p Welcome to my website. Love you.
+          ^note I'm adding the safe so it won't close the p tag.
+          @safe
+            I have nothing to say anymore.
+    
+      ^note It's a stupid idea but I like it
+      @eval
+        return "Credit - Ben Timor, https://bentimor.com"
+
+Compiling into the HTML code:
+
+    <!DOCTYPE html>
+    <html> 
+    <head> 
+    <title> This is my website!
+    </title>
+    </head>
+    <body> 
+    <center> 
+    <h1> Hello! :)
+    </h1>
+    <p> Welcome to my website. Love you.
+    I have nothing to say anymore.
+    </p>
+    </center>
+    Credit - Ben Timor, https://bentimor.com
+    </body>
+    </html>
+
