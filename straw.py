@@ -2,6 +2,7 @@ from processing import process
 from preprocessing import preprocess
 from systemcommands import setup
 from sys import argv as args
+from os import path
 
 def main():
     del args[0]
