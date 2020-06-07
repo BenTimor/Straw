@@ -1,7 +1,0 @@
-.ipynb_checkpoints/*
-__pycache__/*
-testing/__pycache__/*
-testing/.ipynb_checkpoints/*
-.gitignore
-systemcommands/.ipynb_checkpoints/*
-systemcommands/__pycache__/*
