@@ -56,7 +56,8 @@ def find_parameters(line):
     """
     if not has_parameters(line):
         return []
-    return [arg.lstrip(" ") for arg in line.split(")", 1)[0].split("(")[1].split(",")]
+    line = line.replace(",,", "[!PUTCOMMARIGHTHERE1582!]")
+    return [arg.replace("[!PUTCOMMARIGHTHERE1582!]", ",").lstrip(" ") for arg in line.split(")", 1)[0].split("(")[1].split(",")]
 
 def find_text(line):
     """
