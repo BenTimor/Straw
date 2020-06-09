@@ -13,15 +13,14 @@ Straw is a new programming language and it lets you create easily web files. So 
 ## Requirements
  - Python 3.x
 
-## Installation and Compiling
-We don't have any official installation right now. That's a feature which will be added in the near future. Right now, you can follow the next steps to clone the project and use the compiler.
+## Installation and Usage
+We're on pip!
+You can install Straw easily via the following command:
 
-For installation, clone Straw:
+    pip install StrawEngine
+Now, if you want to 'compile' a file, you can do it via the following command:
 
-    git clone https://github.com/DrBenana/Straw.git
-Next, if you want to compile some file/s, just run this code:
-
-    python [Clone Directory]/Straw/straw.py [File], [File2]...
+    straw file(,file2,file3...)
 
 ## Tutorial
 You can read the tutorial in the [tutorial](https://github.com/DrBenana/Straw/tree/master/tutorial) folder.
