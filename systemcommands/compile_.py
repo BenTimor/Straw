@@ -1,5 +1,6 @@
 from subprocess import run, PIPE
 from os import remove
+from logging import warning
 
 def compile_(command, blocks, preprocessed):
     """
@@ -16,6 +17,7 @@ def compile_(command, blocks, preprocessed):
         return 0;
     }
     """
+    warning("The process command @compile is depracated and will be removed in the near future.")
     if len(command.parms) >= 4:
         compilecommand = command.parms[2].split(" ")
         runcommand = command.parms[3].split(" ")
