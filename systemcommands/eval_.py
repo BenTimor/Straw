@@ -2,13 +2,15 @@ import systemcommands
 import importlib.util
 from os import remove, path
 
+COMMAND = "@eval"
+
 def importfile(name, path):
     spec = importlib.util.spec_from_file_location(name, path)
     foo = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(foo)
     return foo
 
-def eval_(command, blocks, preprocessed):
+def run(command, blocks, preprocessed):
     """
     Takes a python code and puts the return in the HTML
     """

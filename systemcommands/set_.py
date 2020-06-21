@@ -1,6 +1,8 @@
 from preprocessing import Command
 
-def set_(command, blocks, preprocessed):
+COMMAND = "^set"
+
+def run(command, blocks, preprocessed):
     if command.parms:
         var = command.parms[0]
         to = command.text

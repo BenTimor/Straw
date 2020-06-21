@@ -1,7 +1,9 @@
 from processing import process
 from preprocessing import preprocess
 
-def loop_(command, blocks, preprocessed):
+COMMAND = "@loop"
+
+def run(command, blocks, preprocessed):
     if command.parms:
         # Looping Array
         if command.parms[0].startswith("[") and command.parms[0].endswith("]"):

@@ -1,4 +1,6 @@
-def tofile_(command, blocks, preprocessed):
+COMMAND = "@tofile"
+
+def run(command, blocks, preprocessed):
     if command.parms:
         with open(command.parms[0], "w") as file:
             spaces = None

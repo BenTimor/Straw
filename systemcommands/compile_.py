@@ -2,7 +2,9 @@ from subprocess import run, PIPE
 from os import remove
 from logging import warning
 
-def compile_(command, blocks, preprocessed):
+COMMAND = "@compile"
+
+def run(command, blocks, preprocessed):
     """
     Compiling a code of any language you want. 
     Syntax:

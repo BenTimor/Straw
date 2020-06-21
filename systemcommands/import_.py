@@ -1,7 +1,9 @@
 from processing import process
 from preprocessing import preprocess
 
-def import_(command, blocks, preprocessed):
+COMMAND = "@import"
+
+def run(command, blocks, preprocessed):
     temp = []
     for parm in command.parms:
         with open(parm, "r") as file:

@@ -1,5 +1,7 @@
 from os import remove
 
-def delfile_(command, blocks, preprocessed):
+COMMAND = "@delfile"
+
+def run(command, blocks, preprocessed):
     if command.parms:
         remove(command.parms[0])

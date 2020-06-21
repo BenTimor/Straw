@@ -1,3 +1,5 @@
+from config import SHORT_COMMANDS
+
 class Command:
     """
     A command object, mainly for the preprocessing.
@@ -106,4 +108,12 @@ def preprocess(content, addhtml=True):
         
         # It has to run for every command, it just adds it to the list of commands
         commands.append(Command(find_command(line), find_parameters(line), spaces, find_text(line)))
+        
+    # Adding Short Commands
+    for cmd in commands:
+        if isinstance(cmd, Command):
+            for key, value in SHORT_COMMANDS.items():
+                if key in cmd.command:
+                    cmd.command = value
+        
     return commands 

@@ -1,30 +1,38 @@
 from config import SYSTEM_COMMANDS
-from systemcommands.eval_ import eval_
-from systemcommands.import_ import import_
-from systemcommands.loop_ import loop_
-from systemcommands.safe_ import safe_
-from systemcommands.set_ import set_
-from systemcommands.compile_ import compile_
-from systemcommands.terminal_ import terminal_
-from systemcommands.tofile_ import tofile_
-from systemcommands.delfile_ import delfile_
-from systemcommands.readfile_ import readfile_
+from glob import glob
+from pathlib import Path
+from systemcommands.eval_ import importfile #, eval_
+
+ignore_files = ["__init__.py"]
 
 def add_system_command(command, func):
     SYSTEM_COMMANDS[command] = func
 
+def setup_files():
+    """
+    The past version of "setup" was too easy and I thought to myself
+    'Ben, You really have to develop something a little more impressive'
+    
+    Everyone knows how much I like reflection in Java,
+    So I've decided to use reflection in Python to import the system commands.
+    
+    And btw make it a little more prettier code.
+    """
+    path = Path(__file__).parent.absolute()
+    files = glob(f"{path}/*.py")
+    
+    for file in files:
+        name = file.replace(str(path) + "/", "", 1)
+        if name in ignore_files:
+            continue
+        temp = importfile(name, file)
+        add_system_command(temp.COMMAND, getattr(temp, "run"))
+    
 def setup():
     """
-    Adding all of the default system commands into the dictionary
+    Basically registers the system commands.
     """
+    setup_files()
+    # Another short commands
     add_system_command("^note", lambda x, y, z: None)
-    add_system_command("^set", set_)
-    add_system_command("@safe", safe_)
-    add_system_command("@eval", eval_)
-    add_system_command("@import", import_)
-    add_system_command("@loop", loop_)
-    add_system_command("@compile", compile_)
-    add_system_command("@terminal", terminal_)
-    add_system_command("@tofile", tofile_)
-    add_system_command("@delfile", delfile_)
-    add_system_command("@readfile", readfile_)
+    add_system_command("@shortsafe", lambda command, blocks, preprocessed: command.text)

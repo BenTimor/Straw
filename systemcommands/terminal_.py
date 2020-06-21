@@ -1,6 +1,8 @@
 from subprocess import run, PIPE
 
-def terminal_(command, blocks, preprocessed):
+COMMAND = "@terminal"
+
+def run(command, blocks, preprocessed):
     outputs = []
     for block in blocks:
         result = run(["sh", "-c", block.text], stdout=PIPE)
