@@ -26,7 +26,7 @@ def setup_files():
         if name in ignore_files:
             continue
         temp = importfile(name, file)
-        add_system_command(temp.COMMAND, getattr(temp, "run"))
+        add_system_command(temp.COMMAND, temp.run)
     
 def setup():
     """
