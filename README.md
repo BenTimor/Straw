@@ -1,5 +1,7 @@
 ﻿# Straw - A WIP Client-Side Programming Language
 
+[Fork project in Rust programming language](https://github.com/BenTimor/IronStraw)
+
 > There's nobody who doesn't know about HTML. The 'must have' client-side programming language for every website. You literally have to build your website template via HTML tags, because it's the only language browser support.
 > 
 > I say, no more! We have to walk into the future. We have to develop new features, new languages and new frameworks which is coming to replace the HTML language.
@@ -23,7 +25,7 @@ Now, if you want to 'compile' a file, you can do it via the following command:
     straw file(,file2,file3...)
 
 ## Tutorial
-You can read the tutorial in the [tutorial](https://github.com/DrBenana/Straw/tree/master/tutorial) folder.
+You can read the tutorial in the [tutorial](https://github.com/BenTimor/Straw/tree/master/tutorial) folder.
 
 ## Code Example
 Straw code:
