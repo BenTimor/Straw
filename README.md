@@ -1,17 +1,13 @@
-﻿# Straw - A WIP Client-Side Programming Language
+# Straw - a Template Engine Structure
+Straw is a Python project which is created so I'll be able to develop it again in another programming languages.
+I'm developing this project again and again in another languages because it's simple enough to develop when I'm new to the language, but advanced enough so I'll be able to learn something.
+
+[More information for Hebrew speakers on my blog.](https://bentimor.com/straw/)
 
 [Fork project in Rust programming language](https://github.com/BenTimor/IronStraw)
-
-> There's nobody who doesn't know about HTML. The 'must have' client-side programming language for every website. You literally have to build your website template via HTML tags, because it's the only language browser support.
-> 
-> I say, no more! We have to walk into the future. We have to develop new features, new languages and new frameworks which is coming to replace the HTML language.
-
-Straw is a new programming language and it lets you create easily web files. So why using Straw instead of HTML?
-
- 1. First of all, the code of straw is a lot more elegant than HTML code. And the more **beautiful** the code is, the **easier** to work about the website.
- 2. Straw contains a lot of features which **doesn't exist** in pure HTML. those features let you dynamically generate new web files. For example, you can write new functions and import files of **another programming languages** into your Straw code!
- 3. For the general purpose, Straw may be **easier**, and the code may be **shorter**. You don't have to close tags and you can see which tag is found inside another.
  
+Currently, this project is totally abandoned and I'm not working on it, I just use it as a structure.
+
 ## Requirements
  - Python 3.x
 
