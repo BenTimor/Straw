@@ -4,7 +4,7 @@ I'm developing this project again and again in another languages because it's si
 
 [More information for Hebrew speakers on my blog.](https://bentimor.com/straw/)
 
-[Fork project in Rust programming language](https://github.com/BenTimor/IronStraw)
+[Straw in Rust programming language](https://github.com/BenTimor/IronStraw)
  
 Currently, this project is totally abandoned and I'm not working on it, I just use it as a structure.
 
